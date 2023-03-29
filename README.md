@@ -7,7 +7,7 @@
 3. Создайте ещё один инстанс (2CPU4RAM) на основе образа `jetbrains/teamcity-agent`. Пропишите к нему переменную окружения `SERVER_URL: "http://<teamcity_url>:8111"`.
 4. Авторизуйте агент.
 5. Сделайте fork [репозитория](https://github.com/aragastmatb/example-teamcity).
-6. Создайте VM (2CPU4RAM) и запустите [playbook](./infrastructure).
+6. Создайте VM (2CPU4RAM) и запустите playbook
 ![image](https://user-images.githubusercontent.com/108946489/228396420-e9827bba-40d5-4754-8b37-29f1ca06226a.png)
 
 ## Основная часть
@@ -35,9 +35,13 @@
 ![image](https://user-images.githubusercontent.com/108946489/228452407-c21463ad-bec9-4071-9976-c344bda32787.png)
 14. Внесите изменения из произвольной ветки `feature/add_reply` в `master` через `Merge`.
 15. Убедитесь, что нет собранного артефакта в сборке по ветке `master`.
+![image](https://user-images.githubusercontent.com/108946489/228457960-91be2e50-e672-42a0-af9a-6834be83d048.png)
 16. Настройте конфигурацию так, чтобы она собирала `.jar` в артефакты сборки.
+![image](https://user-images.githubusercontent.com/108946489/228458193-7cffddcc-5990-47cc-8fe7-bb87111145e6.png)
 17. Проведите повторную сборку мастера, убедитесь, что сбора прошла успешно и артефакты собраны.
+![image](https://user-images.githubusercontent.com/108946489/228457540-40f47f0a-76d2-4d8a-bfef-121d31dc5f5e.png)
 18. Проверьте, что конфигурация в репозитории содержит все настройки конфигурации из teamcity.
+![image](https://user-images.githubusercontent.com/108946489/228458460-3aea90a4-dfc6-4a85-b0ac-9521eb823a5a.png)
 19. В ответе пришлите ссылку на репозиторий.
-
+<a href='https://github.com/askarpoff/example-teamcity'>https://github.com/askarpoff/example-teamcity</a>
 ---
