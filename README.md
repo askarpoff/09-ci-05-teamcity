@@ -19,11 +19,14 @@
 ![image](https://user-images.githubusercontent.com/108946489/228400704-264e6368-6a7b-4126-8334-cdaa35506644.png)
 4. Поменяйте условия сборки: если сборка по ветке `master`, то должен происходит `mvn clean deploy`, иначе `mvn clean test`.
 ![image](https://user-images.githubusercontent.com/108946489/228402884-9c1b421b-18be-4aa5-98c2-3136d59913c0.png)
-
-5. Для deploy будет необходимо загрузить [settings.xml](./teamcity/settings.xml) в набор конфигураций maven у teamcity, предварительно записав туда креды для подключения к nexus.
+5. Для deploy будет необходимо загрузить settings.xml в набор конфигураций maven у teamcity, предварительно записав туда креды для подключения к nexus.
+![image](https://user-images.githubusercontent.com/108946489/228404551-c42d8d6d-9606-4295-bf79-5d956378b090.png)
 6. В pom.xml необходимо поменять ссылки на репозиторий и nexus.
+![image](https://user-images.githubusercontent.com/108946489/228404835-453c1eb9-986a-47b0-b24b-1f4dab7ef7ab.png)
 7. Запустите сборку по master, убедитесь, что всё прошло успешно и артефакт появился в nexus.
+![image](https://user-images.githubusercontent.com/108946489/228407747-ee5f63d6-ed98-4d2b-9b69-c0739ce4e701.png)
 8. Мигрируйте `build configuration` в репозиторий.
+
 9. Создайте отдельную ветку `feature/add_reply` в репозитории.
 10. Напишите новый метод для класса Welcomer: метод должен возвращать произвольную реплику, содержащую слово `hunter`.
 11. Дополните тест для нового метода на поиск слова `hunter` в новой реплике.
